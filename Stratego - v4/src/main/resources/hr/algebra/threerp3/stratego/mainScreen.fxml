@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox maxHeight="726.0" maxWidth="749.0" minHeight="600.0" minWidth="600.0" prefHeight="726.0" prefWidth="749.0"
+      spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="hr.algebra.threerp3.stratego.HelloController">
+    <children>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Game">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Save"/>
+                        <MenuItem mnemonicParsing="false" onAction="#loadGame" text="Load"/>
+                        <MenuItem mnemonicParsing="false" onAction="#newGame" text="New"/>
+                        <MenuItem mnemonicParsing="false" onAction="#replayGame" text="Replay"/>
+                        <MenuItem mnemonicParsing="false" onAction="#resetGame" text="Reset"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Documentation">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#generateDocumentationOnClick" text="Generate"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Rules">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openRulesWindows" text="Open rules"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxWidth="746.0" prefHeight="682.0" prefWidth="746.0">
+            <children>
+                <Label fx:id="attackLabel" layoutX="85.0" layoutY="6.0" prefHeight="17.0" prefWidth="478.0"/>
+                <Label fx:id="turnLabel" layoutX="14.0" layoutY="6.0" text="Turn: Red"/>
+                <GridPane fx:id="gridBoard" gridLinesVisible="true" layoutY="26.0" prefHeight="442.0" prefWidth="563.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                    </rowConstraints>
+                </GridPane>
+                <TextArea fx:id="chatTextArea" editable="false" layoutX="14.0" layoutY="493.0" prefHeight="97.0"
+                          prefWidth="624.0" wrapText="true"/>
+                <Button fx:id="sendBtn" layoutX="646.0" layoutY="622.0" mnemonicParsing="false"
+                        onAction="#sendMessageOnClick" text="Send"/>
+                <TextField fx:id="chatMsgTextField" layoutX="14.0" layoutY="622.0" prefHeight="25.0" prefWidth="624.0"/>
+                <Label fx:id="theLastGameMoveLabel" layoutX="584.0" layoutY="26.0" prefHeight="70.0" prefWidth="132.0"
+                       text="The last game move:" wrapText="true"/>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+
+<h2>hr.algebra.threerp3.stratego.HelloApplication</h2>package hr.algebra.threerp3.stratego<br><br>public
+HelloApplication extends Application -> Object<br><br>FIELDS: <br><br>METHODS: <br>public static void
+main(java.lang.String[] arg0)<br>public void start(javafx.stage.Stage arg0) throws IOException<br>public static void
+openNewStage() throws Exception<br><br>CONSTRUCTORS: <br>public HelloApplication()<h2>
+    hr.algebra.threerp3.stratego.HelloController</h2>package hr.algebra.threerp3.stratego<br><br>public HelloController
+extends Object<br><br>FIELDS: public GridPane gridBoard<br>public Label turnLabel<br>public Label attackLabel<br>public
+static boolean gameOver<br>public static int NUM_OF_ROWS<br>public static int NUM_OF_COLS<br>public static Figure[][]
+board<br><br>METHODS: <br>@javafx.fxml.FXML()private void initialize()<br>public void loadGame()<br>public void
+saveGame()<br>public void newGame()<br>public void generateDocumentationOnClick()<br>private void setControllers()<br>private
+void initializeBoard()<br>public void openRulesWindows() throws Exception<br><br>CONSTRUCTORS: <br>public
+HelloController()<h2>hr.algebra.threerp3.stratego.model.Colors</h2>package hr.algebra.threerp3.stratego.model<br><br>public
+final Colors extends Enum -> Object implements Serializable<br><br>FIELDS: public static final Colors Blue<br>public
+static final Colors Red<br>public static final Colors Blank<br>private static final Colors[] $VALUES<br><br>METHODS:
+<br>public static class [Lhr.algebra.threerp3.stratego.model.Colors; values()<br>public static class
+hr.algebra.threerp3.stratego.model.Colors valueOf( java.lang.String arg0)<br>private static class
+[Lhr.algebra.threerp3.stratego.model.Colors; $values()<br><br>CONSTRUCTORS: <br>private Colors( java.lang.String arg0,
+int arg1)<h2>hr.algebra.threerp3.stratego.model.Figure</h2>package hr.algebra.threerp3.stratego.model<br><br>public
+Figure extends Object implements Serializable<br><br>FIELDS: private static final long serialVersionUID<br>public Colors
+color<br>public String role<br>public int rank<br>public boolean targeted<br><br>METHODS: <br><br>CONSTRUCTORS: <br>public
+Figure(hr.algebra.threerp3.stratego.model.Colors arg0, java.lang.String arg1, int arg2)<h2>
+    hr.algebra.threerp3.stratego.model.GameState</h2>package hr.algebra.threerp3.stratego.model<br><br>public GameState
+extends Object implements Serializable<br><br>FIELDS: private Colors turn<br>private Figure[][] gameBoardState<br><br>METHODS:
+<br>public void setGameBoardState(hr.algebra.threerp3.stratego.model.Figure[][] arg0)<br>public class
+hr.algebra.threerp3.stratego.model.Colors getTurn()<br>public void setTurn(hr.algebra.threerp3.stratego.model.Colors
+arg0)<br>public class [[Lhr.algebra.threerp3.stratego.model.Figure; getGameBoardState()<br><br>CONSTRUCTORS: <br>public
+GameState(hr.algebra.threerp3.stratego.model.Colors arg0, hr.algebra.threerp3.stratego.model.Figure[][] arg1)<h2>
+    hr.algebra.threerp3.stratego.model.Roles</h2>package hr.algebra.threerp3.stratego.model<br><br>public Roles extends
+Object<br><br>FIELDS: public static final String MARSHAL<br>public static final String GENERAL<br>public static final
+String COLONEL<br>public static final String MAJOR<br>public static final String CAPTAIN<br>public static final String
+LIEUTENANT<br>public static final String SERGEANT<br>public static final String MINER<br>public static final String
+SCOUT<br>public static final String SPY<br>public static final String FLAG<br>public static final String BOMB<br>public
+static final String SELECTED<br><br>METHODS: <br><br>CONSTRUCTORS: <br>public Roles()<h2>
+    hr.algebra.threerp3.stratego.RulesController</h2>package hr.algebra.threerp3.stratego<br><br>public RulesController
+extends Object<br><br>FIELDS: <br><br>METHODS: <br><br>CONSTRUCTORS: <br>public RulesController()<h2>
+    hr.algebra.threerp3.stratego.utils.BoardUtils$ButtonSelected</h2>package hr.algebra.threerp3.stratego.utils<br><br>public
+static ButtonSelected extends Object<br><br>FIELDS: public static int BoardUtils$selectedRow<br>public static int
+BoardUtils$selectedColumn<br><br>METHODS: <br><br>CONSTRUCTORS: <br>public BoardUtils$ButtonSelected()<h2>
+    hr.algebra.threerp3.stratego.utils.BoardUtils</h2>package hr.algebra.threerp3.stratego.utils<br><br>public
+BoardUtils extends Object<br><br>FIELDS: private static HelloController controller<br>public static Colors turn<br><br>METHODS:
+<br>public static void setController(hr.algebra.threerp3.stratego.HelloController arg0)<br>public static void
+drawBoard(hr.algebra.threerp3.stratego.model.Figure[][] arg0, javafx.scene.layout.GridPane arg1)<br>public static class
+javafx.scene.control.Button createButton(hr.algebra.threerp3.stratego.model.Figure arg0)<br>private static void
+lambda$drawBoard$2(int arg0, int arg1, javafx.event.ActionEvent arg2)<br>private static void handleButtonClick(int arg0,
+int arg1)<br>private static void lambda$drawBoard$1(int arg0, int arg1, javafx.event.ActionEvent arg2)<br>private static
+void lambda$drawBoard$0(int arg0, int arg1, javafx.event.ActionEvent arg2)<br>public static class
+javafx.scene.control.Button createTargetedButton(hr.algebra.threerp3.stratego.model.Figure arg0)<br>private static class
+javafx.scene.control.Button createAvailableButton()<br>public static interface java.util.List
+createFigures(hr.algebra.threerp3.stratego.model.Colors arg0)<br>public static class
+hr.algebra.threerp3.stratego.model.Figure createBlankFigure()<br>public static int getRank(java.lang.String arg0)<br>public
+static void addFigures(java.util.List
+<hr.algebra.threerp3.stratego.model.Figure> arg0, hr.algebra.threerp3.stratego.model.Colors arg1, java.lang.String arg2,
+    int arg3)<br>public static void switchTurn()<br><br>CONSTRUCTORS: <br>public BoardUtils()<h2>
+        hr.algebra.threerp3.stratego.utils.ButtonLogicUtils</h2>package hr.algebra.threerp3.stratego.utils<br><br>public
+    ButtonLogicUtils extends Object<br><br>FIELDS: private static HelloController controller<br><br>METHODS: <br>public
+    static void setController(hr.algebra.threerp3.stratego.HelloController arg0)<br>public static void
+    unMarkAvailableAndTargetedButtons()<br>public static void switchPlaces(int arg0, int arg1)<br>public static void
+    markAvailableButtons(int arg0, int arg1)<br>private static void markAvailableButtonsInDirection(int arg0, int arg1,
+    int arg2, int arg3)<br>public static void attack(int arg0, int arg1)<br>private static void checkAndMarkCell(int
+    arg0, int arg1, int arg2, int arg3)<br><br>CONSTRUCTORS: <br>public ButtonLogicUtils()<h2>
+        hr.algebra.threerp3.stratego.utils.DialogUtils</h2>package hr.algebra.threerp3.stratego.utils<br><br>public
+    DialogUtils extends Object<br><br>FIELDS: <br><br>METHODS: <br>public static void
+    showDialog(javafx.scene.control.Alert$AlertType arg0, java.lang.String arg1, java.lang.String arg2)<br><br>CONSTRUCTORS:
+    <br>public DialogUtils()<h2>hr.algebra.threerp3.stratego.utils.DocumentationUtils</h2>package
+    hr.algebra.threerp3.stratego.utils<br><br>public DocumentationUtils extends Object<br><br>FIELDS: <br><br>METHODS:
+    <br>public static void generateDocumentation()<br>public static void readClassAndMembersInfo(java.lang.Class<?>
+    arg0, java.lang.StringBuilder arg1)<br>private static class java.lang.String
+    lambda$appendFields$2(java.lang.reflect.Field arg0)<br>public static void appendPackage(java.lang.Class<?> arg0,
+    java.lang.StringBuilder arg1)<br>public static void appendInterfaces(java.lang.Class<?> arg0,
+    java.lang.StringBuilder arg1)<br>public static void appendParent(java.lang.Class<?> arg0, java.lang.StringBuilder
+    arg1, boolean arg2)<br>public static void readClassInfo(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)<br>private
+    static void appendFields(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)<br>public static void
+    appendModifiers(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)<br>private static void
+    appendExceptions(java.lang.reflect.Executable arg0, java.lang.StringBuilder arg1)<br>private static void
+    appendAnnotations(java.lang.reflect.Executable arg0, java.lang.StringBuilder arg1)<br>private static void
+    appendConstructors(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)<br>private static void
+    appendMethods(java.lang.Class<?> arg0, java.lang.StringBuilder arg1)<br>private static class java.lang.String
+    cutPackageName(java.lang.String arg0)<br>private static void appendParameters(java.lang.reflect.Executable arg0,
+    java.lang.StringBuilder arg1)<br>private static boolean lambda$generateDocumentation$1(java.lang.String arg0)<br>private
+    static boolean lambda$generateDocumentation$0(java.lang.String arg0)<br><br>CONSTRUCTORS: <br>public
+    DocumentationUtils()<h2>hr.algebra.threerp3.stratego.utils.FileUtils</h2>package
+    hr.algebra.threerp3.stratego.utils<br><br>public FileUtils extends Object<br><br>FIELDS: public static final String
+    GAME_SAVE_FILE_NAME<br><br>METHODS: <br>public static class hr.algebra.threerp3.stratego.model.GameState
+    loadGame()<br>public static void saveGame(hr.algebra.threerp3.stratego.model.Figure[][] arg0,
+    hr.algebra.threerp3.stratego.model.Colors arg1, java.lang.Integer arg2, java.lang.Integer arg3)<br><br>CONSTRUCTORS:
+    <br>public FileUtils()<h2>hr.algebra.threerp3.stratego.utils.SaveLoadUtils</h2>package
+    hr.algebra.threerp3.stratego.utils<br><br>public SaveLoadUtils extends Object<br><br>FIELDS: private static
+    HelloController controller<br><br>METHODS: <br>public static void
+    setController(hr.algebra.threerp3.stratego.HelloController arg0)<br>public static void loadGame()<br>public static
+    void saveGame()<br><br>CONSTRUCTORS: <br>public SaveLoadUtils()
+</body>
+</html>
